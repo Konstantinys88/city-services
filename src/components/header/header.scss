@@ -1,4 +1,40 @@
 .header {
-    height: 50px;
-    background: gray;
+    padding: 50px 20px;
+    height: 100vh;
+    background-color: rgb(255, 255, 255, 0.4);
+    top: 0;
+    left: 0;
+
+    font-size: 20px;
+
+
+
+    &__nav {
+        margin-top: 50px;
+        margin-left: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        
+        font-size: 24px;
+        font-weight: 900;
+    }
+
+    &__dropdown {
+        display: flex;
+        flex-direction: column;
+        padding-left: 10px;
+        transition: 1s;
+    }
+
+    &__dropdown-container {
+        max-height: 0px;
+        opacity: 0;
+    }
+
+    &__dropdown-container-active {
+        max-height: 200px;
+        opacity: 1;
+    }
 }
+
