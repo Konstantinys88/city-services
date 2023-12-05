@@ -1,5 +1,6 @@
 .header {
     padding: 50px 20px;
+    min-width: 300px;
     height: 100vh;
 
     background-color: rgba(10, 13, 197, 0.8);
@@ -22,6 +23,14 @@
         font-weight: 900;
     }
 
+    &__link {
+        transition: .5s;
+        &:hover {
+            color:gray;
+            transition: .5s;
+        }
+    }
+
     &__dropdown {
         display: flex;
         flex-direction: column;
@@ -30,13 +39,17 @@
     }
 
     &__dropdown-container {
+        visibility: hidden;
         max-height: 0px;
         opacity: 0;
+        transition: 1s;
     }
 
     &__dropdown-container-active {
+        visibility: visible;
         max-height: 200px;
         opacity: 1;
+        transition: 1s;
     }
 }
 
