@@ -22,7 +22,7 @@ const Header = () => {
 			<h1>CitiServices</h1>
 			<div className='header__nav'>
 				<Link href={`/`}>Главная</Link>
-				<Link href={`#`}>О нас</Link>
+				<Link href={`/about`}>О нас</Link>
 				<button className='button' onClick={handleDropdownRestaurants}>Еда<span> &#x25BC;</span></button>
 				<div className={`${dropdownStyleRestaurants} ${'header__dropdown'}`}>
 					<Link href="#">Рестораны</Link>
