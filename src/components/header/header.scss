@@ -1,8 +1,9 @@
-.header {
+@import '../../app/variables.module.scss';
 
+.header {
     padding: 50px 20px;
-    background-color: rgb(134, 75, 139);
-    color: rgb(196, 204, 211);
+    background-color: #272727;
+    color: $COLOR-TEXT;
     font-size: 20px;
 
     &__nav {
@@ -13,7 +14,7 @@
         gap: 5px;
 
         font-size: 24px;
-        font-weight: 900;
+        font-weight: 300;
     }
 
     &__link {

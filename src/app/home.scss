@@ -1,3 +1,5 @@
+@import '../app/variables.module.scss';
+
 .home {
     display: flex;
     flex-direction: column;
@@ -5,13 +7,13 @@
     padding: 50px 20px;
 
     &__promo {
-        // max-width: 1300px;
         padding: 10px;
     }
 
     &__block-title {
         padding: 10px 0;
         font-size: 20px;
+
     }
 
     &__list {
@@ -19,6 +21,7 @@
         flex-wrap: wrap;
         gap: 15px;
         margin-bottom: 15px;
+
     }
 
     &__item {
@@ -28,7 +31,7 @@
     &__card-big {
         height: 200px;
         border-radius: 12px;
-        box-shadow: 10px 10px 10px rgb(51, 51, 51);
+        box-shadow: 10px 10px 10px #1f1f1e;
         margin-bottom: 15px;
         overflow: hidden;
 
@@ -44,45 +47,56 @@
         width: 300px;
         height: 150px;
         border-radius: 12px;
-        box-shadow: 10px 10px 10px rgb(51, 51, 51);
+        box-shadow: 10px 10px 10px #1f1f1e;
         overflow: hidden;
         cursor: pointer;
+
 
         &_img {
             position: absolute;
             width: 100%;
             height: 100%;
-            z-index: -1;
             object-fit: fill;
         }
 
         &_title {
+            position: relative;
+            z-index: 10;
             margin: 10px;
-            color: rgb(255, 255, 255);
+            color: $COLOR-TEXT-CARD;
             font-size: 20px;
             font-weight: 900;
         }
 
         &_timeWork {
+            position: relative;
+            z-index: 10;
             margin: 10px;
             color: rgb(255, 255, 255);
             font-size: 14px;
             font-weight: 500;
+            color: $COLOR-TEXT-CARD;
         }
 
         &_addres {
+            position: relative;
+            z-index: 10;
             margin: 10px;
             color: rgb(255, 255, 255);
             font-size: 14px;
             font-weight: 500;
+            color: $COLOR-TEXT-CARD;
         }
 
         &_quality {
+            position: relative;
+            z-index: 10;
             margin: 10px;
             margin-top: 20px;
             color: rgb(255, 255, 255);
             font-size: 20px;
             font-weight: 900;
+            color: $COLOR-TEXT-CARD;
         }
 
     }
@@ -91,7 +105,7 @@
         max-height: 500px;
         border-radius: 12px;
         overflow: hidden;
-        box-shadow: 20px 20px 20px rgb(51, 51, 51);
+        box-shadow: 20px 20px 20px #1f1f1e;
     }
 
     &__mapPaddig {
