@@ -2,9 +2,12 @@
 
 .header {
     padding: 50px 20px;
-    background-color: #272727;
+    // background-color: #22dff8;
     color: $COLOR-TEXT;
     font-size: 20px;
+
+    background: rgb(2, 0, 36);
+    background: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgba(34, 223, 248, 1) 50%, rgba(0, 212, 255, 1) 100%);
 
     &__nav {
         margin-top: 50px;
