@@ -9,7 +9,8 @@ export default function Home() {
 
 			<div className="home__promo">
 				<div className="home__card-big">
-					<Image className="home__card-big_img" src="/img2.jpg" alt="image" width={100} height={100} />
+					Здесь могла быть ваша реклама
+					{/* <Image className="home__card-big_img" src="/img2.jpg" alt="image" width={100} height={100} /> */}
 				</div>
 				<h3 className='home__block-title'>Популярные рестораны</h3>
 				<ul className='home__list'>

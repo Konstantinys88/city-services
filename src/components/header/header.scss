@@ -2,7 +2,6 @@
 
 .header {
     padding: 50px 20px;
-    // background-color: #22dff8;
     color: $COLOR-TEXT;
     font-size: 20px;
 
@@ -22,10 +21,12 @@
 
     &__link {
         transition: .5s;
+        padding: 5px 5px;
 
         &:hover {
-            color: gray;
+            // color: gray;
             transition: .5s;
+            box-shadow: 5px 5px 5px 5px #1f1f1e;
         }
     }
 
