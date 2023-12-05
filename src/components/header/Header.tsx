@@ -11,6 +11,7 @@ const Header = () => {
 
 	const handleDropdownRestaurants = () => {
 		setDropdownRestaurants(!dropdownRestaurants)
+
 	}
 
 	let dropdownStyleRestaurants = "header__dropdown-container";
@@ -21,8 +22,8 @@ const Header = () => {
 			<h1>CitiServices</h1>
 			<div className='header__nav'>
 				<Link href={`/`}>Главная</Link>
-				<Link href={`/`}>О нас</Link>
-				<button className='button' onClick={handleDropdownRestaurants}>Рестораны <span> &#x25BC;</span></button>
+				<Link href={`#`}>О нас</Link>
+				<button className='button' onClick={handleDropdownRestaurants}>Еда<span> &#x25BC;</span></button>
 				<div className={`${dropdownStyleRestaurants} ${'header__dropdown'}`}>
 					<Link href="#">Рестораны</Link>
 					<Link href="#">Бары</Link>

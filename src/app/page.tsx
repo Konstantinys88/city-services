@@ -1,10 +1,37 @@
-import Image from 'next/image'
-import styles from './page.module.scss'
+
+import './home.scss';
+import Map from '../components/Map';
 
 export default function Home() {
 	return (
-		<div>
-			<h1 className={styles.h1}>CitiServices</h1>
+		<div className='home'>
+			<div className="home__promo">
+				<ul className='home__list'>
+					<li className='home__item'>
+						<div className="home__card"></div>
+					</li>
+					<li className='home__item'>
+						<div className="home__card"></div>
+					</li>
+					<li className='home__item'>
+						<div className="home__card"></div>
+					</li>
+					<li className='home__item'>
+						<div className="home__card"></div>
+					</li>
+					<li className='home__item'>
+						<div className="home__card"></div>
+					</li>
+					<li className='home__item'>
+						<div className="home__card"></div>
+					</li>
+				</ul>
+			</div>
+
+			<div className="home__map">
+				<Map />
+			</div>
+
 		</div>
 	)
 }
