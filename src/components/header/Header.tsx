@@ -30,9 +30,6 @@ const Header = () => {
 	dropdownShopping ? dropdownStyleShopping = "header__dropdown-container-active" : dropdownStyleShopping = "header__dropdown-container"
 
 
-
-
-
 	return (
 		<div className='header'>
 			<h1>CitiServices</h1>

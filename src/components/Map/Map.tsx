@@ -13,7 +13,7 @@ export default function Map() {
     const data = [
         {
             title: "test1",
-            category: "Holiday home letting agency",
+            category: "1",
             address: "La Chorrera, Provincia de Guanacaste, Coco, Costa Rica",
             website: "airbnb.com",
             phone: "+506 8837 3951",
@@ -55,28 +55,28 @@ export default function Map() {
     const [latitudeCurent, setLatitudeCurent] = useState<number>(55.783769);
     const [longitudeCurent, setLongitudeCurent] = useState<number>(37.620931);
 
-    const [loading, setLoading] = useState(true);
+    // const [loading, setLoading] = useState(false);
 
     useEffect(() => {
-        pos();
+        // pos();
         // console.log('render')
     }, [latitudeCurent, longitudeCurent]);
 
-    const pos = () => {
-        const success = ({ coords }: any) => {
-            const { latitude, longitude } = coords
-            // const position = [latitude, longitude]
-            setLatitudeCurent(latitude);
-            setLongitudeCurent(longitude);
-            setLoading(false)
-        }
-        const error = ({ message }: any) => {
-            console.log(message) // при отказе в доступе получаем PositionError: User denied Geolocation
-        }
-        navigator.geolocation.getCurrentPosition(success, error, {
-            enableHighAccuracy: true
-        })
-    }
+    // const pos = () => {
+    //     const success = ({ coords }: any) => {
+    //         const { latitude, longitude } = coords
+    //         // const position = [latitude, longitude]
+    //         setLatitudeCurent(latitude);
+    //         setLongitudeCurent(longitude);
+    //         setLoading(false)
+    //     }
+    //     const error = ({ message }: any) => {
+    //         console.log(message) // при отказе в доступе получаем PositionError: User denied Geolocation
+    //     }
+    //     navigator.geolocation.getCurrentPosition(success, error, {
+    //         enableHighAccuracy: true
+    //     })
+    // }
 
 
     // рендер обьектов ---------------------------------------------------------------------------------------------------------------------------
@@ -116,18 +116,18 @@ export default function Map() {
         })
 
         return (
-            <MapContainer className='map' center={[latitudeCurent, longitudeCurent]} zoom={13} scrollWheelZoom={true}>а
+            <MapContainer className='map' center={[55.7522, 37.6156]} zoom={13} scrollWheelZoom={true}>а
                 <TileLayer
                     attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 />
-                <Marker
+                {/* <Marker
                     position={[latitudeCurent, longitudeCurent]}
                     icon={iconPerson}>
                     <Popup>
                         A pretty CSS3 popup. <br /> Easily customizable.
                     </Popup>
-                </Marker>
+                </Marker> */}
                 {itemMarkers}
                 <div className="fix">CitiServices</div>
             </MapContainer>
@@ -135,14 +135,14 @@ export default function Map() {
     }
 
     const curentPositinItem = renderCurentPosition(data);
-    const loadingContent = loading ? "Идет загрузка" : null;
-    const content = !(loading) ? curentPositinItem : null;
+    // const loadingContent = loading ? "Идет загрузка" : null;
+    // const content = !(loading) ? curentPositinItem : null;
 
     return (
         <>
-            {loadingContent}
-            {content}
-            
+            {/* {loadingContent} */}
+            {curentPositinItem}
+
         </>
     );
 }
