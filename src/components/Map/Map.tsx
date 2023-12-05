@@ -12,15 +12,15 @@ export default function Map() {
 
     const data = [
         {
-            title: "Casa La Mar Coco",
+            title: "test1",
             category: "Holiday home letting agency",
             address: "La Chorrera, Provincia de Guanacaste, Coco, Costa Rica",
             website: "airbnb.com",
             phone: "+506 8837 3951",
             worksTime: "Monday, Open 24 hours; Tuesday, Open 24 hours; Wednesday, Open 24 hours; Thursday, Open 24 hours; Friday, Open 24 hours; Saturday, 8 am to 4 pm; Sunday, 8 am to 12 pm",
             coords: {
-                latitude: "10.5648666",
-                longitude: "-85.689810"
+                latitude: "55.956569",
+                longitude: "37.081097"
             },
             imagUrl: "https://lh5.googleusercontent.com/p/AF1QipML-2njDEFPo9rPjfEReHhWtCRxpESFg9a2Ced3=w408-h272-k-no"
         },
@@ -32,8 +32,8 @@ export default function Map() {
             phone: "+506 8837 3951",
             worksTime: "Monday, Open 24 hours; Tuesday, Open 24 hours; Wednesday, Open 24 hours; Thursday, Open 24 hours; Friday, Open 24 hours; Saturday, 8 am to 4 pm; Sunday, 8 am to 12 pm",
             coords: {
-                latitude: "10.549177131029078",
-                longitude: "-85.69998033376883"
+                latitude: "55.431933",
+                longitude: "37.648615"
             },
             imagUrl: "https://lh5.googleusercontent.com/p/AF1QipML-2njDEFPo9rPjfEReHhWtCRxpESFg9a2Ced3=w408-h272-k-no"
         },
@@ -45,15 +45,15 @@ export default function Map() {
             phone: "+506 8837 3951",
             worksTime: "Monday, Open 24 hours; Tuesday, Open 24 hours; Wednesday, Open 24 hours; Thursday, Open 24 hours; Friday, Open 24 hours; Saturday, 8 am to 4 pm; Sunday, 8 am to 12 pm",
             coords: {
-                latitude: " 10.542679803371538",
-                longitude: "-85.68084009042305"
+                latitude: "55.851816",
+                longitude: "37.812411"
             },
             imagUrl: "https://lh5.googleusercontent.com/p/AF1QipML-2njDEFPo9rPjfEReHhWtCRxpESFg9a2Ced3=w408-h272-k-no"
         },
     ]
 
-    const [latitudeCurent, setLatitudeCurent] = useState<any>(37.3394);
-    const [longitudeCurent, setLongitudeCurent] = useState(-121.895);
+    const [latitudeCurent, setLatitudeCurent] = useState<number>(55.783769);
+    const [longitudeCurent, setLongitudeCurent] = useState<number>(37.620931);
 
     const [loading, setLoading] = useState(true);
 
@@ -78,6 +78,7 @@ export default function Map() {
         })
     }
 
+
     // рендер обьектов ---------------------------------------------------------------------------------------------------------------------------
 
     const iconTest = new Icon({
@@ -86,7 +87,8 @@ export default function Map() {
     });
 
     const iconPerson = new Icon({
-        iconUrl: 'https://w7.pngwing.com/pngs/587/702/png-transparent-attribution-icon-person-icon-male-icon-person.png',
+        // iconUrl: 'https://w7.pngwing.com/pngs/587/702/png-transparent-attribution-icon-person-icon-male-icon-person.png',
+        iconUrl: 'https://avatars.mds.yandex.net/i?id=f36c73de89d5d08f600b7bf481ca3843f0037987-9065868-images-thumbs&n=13',
         iconSize: [50, 50],
     });
 
@@ -127,6 +129,7 @@ export default function Map() {
                     </Popup>
                 </Marker>
                 {itemMarkers}
+                <div className="fix">CitiServices</div>
             </MapContainer>
         )
     }
@@ -139,6 +142,7 @@ export default function Map() {
         <>
             {loadingContent}
             {content}
+            
         </>
     );
 }
