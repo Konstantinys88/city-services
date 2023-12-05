@@ -32,7 +32,9 @@ const Header = () => {
 
 	return (
 		<div className='header'>
-			<h1>CitiServices</h1>
+			<div>
+				<h1>CitiServices</h1>
+			</div>
 			<div className='header__nav'>
 				<Link className='header__link' href={`/`}>Главная</Link>
 				<Link className='header__link' href={`/about`}>О нас</Link>
